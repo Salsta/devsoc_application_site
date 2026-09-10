@@ -1,1 +1,231 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian - Day & Night</title>
+
+  <style>
+    body {
+      background-color: #eaf6ff;
+      color: #222;
+      margin: 0;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    header {
+      padding: 30px 0 15px 0;
+      border-bottom: 1px solid #999;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      color: inherit;
+    }
+
+    
+    button {
+      margin-top: 15px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+
+
+
+
+    
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid #aaa;
+    }
+
+    
+    .photo-box {
+      border: 1px dashed #555;
+      padding: 70px 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    
+    .night {
+      background-color: #161b2b;
+      color: #eeeeee;
+    }
+
+    .night .photo-box {
+      border-color: #aaa;
+    }
+
+    .night-only {
+      display: none;
+    }
+    body.night .day-only {
+      display: none;
+    }
+    body.night .night-only {
+      display: block;
+    }
+    footer {
+      padding: 25px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Hi, I'm Brian 👋</h1>
+
+      <p class="day-only">
+        Computer Science + Actuarial Studies student by day.
+      </p>
+
+      <p class="night-only">
+        Gamer, coder and professional "one more game" victim by night.
+      </p>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#coding">Coding</a>
+        <a href="#outside">Outside</a>
+      </nav>
+
+      <button onclick="toggleTheme()" id="themeButton">
+        🌙 Switch to night
+      </button>
+    </header>
+
+
+    <section id="about">
+      <h2>About me</h2>
+
+      <p>
+        I'm a third year Computer Science and Actuarial Studies student at UNSW.
+        I enjoy trying new things, travelling, food, hiking and design.
+      </p>
+
+      <p class="day-only">
+        ☀️ Daytime hobbies/happs: looking for somewhere to eat,
+        planning a trip, hiking or playing paddle.
+      </p>
+
+      <p class="night-only">
+        🌙 Nighttime hobbies/happs: going out to eat, Rocket League, Minecraft,
+        or maybe cheeky drinks
+      </p>
+    </section>
+
+
+    <section id="coding">
+      <h2>My developer inventory</h2>
+
+      <p><strong>Languages:</strong></p>
+      <ul>
+        <li>C</li>
+        <li>JavaScript / TypeScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>SQL</li>
+      </ul>
+
+      <p><strong>Other tools:</strong></p>
+      <ul>
+        <li>Git</li>
+        <li>Vercel</li>
+        <li>Figma</li>
+        <li>Adobe Illustrator</li>
+        <li>LLMs</li>
+      </ul>
+
+      <p>
+        <strong>COMP courses:</strong><br>
+        COMP1511, COMP1531, COMP2521, COMP2511,
+        COMP3821, COMP6771, COMP9417, COMP3311
+      </p>
+    </section>
+
+
+    <section>
+      <h2>Fun Facts</h2>
+
+      <ul>
+        <li>🎮 1000+ hours in CSGO</li>
+        <li>⚽ Currently playing Rocket League</li>
+        <li>⛏️ Minecraft enjoyer</li>
+        <li>🏓 Currently obsessed with Padel</li>
+        <li>🎨 Ran a graphic design service with 50+ completed projects</li>
+      </ul>
+
+      <p>
+        My design work:
+        <a href="https://www.fiverr.com/brianliu0121" target="_blank">
+          Fiverr
+        </a>
+      </p>
+    </section>
+
+
+    <section id="outside">
+      <h2>Hikes</h2>
+
+      <p>
+        I really enjoy travelling and hiking. One of my favourite trips
+        was New Zealand, especially hiking Roy's Peak.
+      </p>
+
+      <div class="photo-box">
+        Insert Roy's Peak photo here 🏔️
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Final Thoughts! </h2>
+
+      <p>
+        I really hope that I have the chance to be a part of DevSoc! I'm super eager to learn more
+        about software devlopment, make new friends and make some memories!
+
+        While I don't have a lot of software development experience I hope that
+        my growth mindset and enthusiastic attitude makes up for it! 
+        
+        (I had no experience with website development so apologise for the sub-par website, 
+        but I learnt the basics on the fly through some quick google searches!) 
+      </p>
+    </section>
+
+
+    <footer>
+      <p>Thanks for reading! I would absolutely love the oppurtunity to be a part of DevSoc! </p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("night");
+
+      var button = document.getElementById("themeButton");
+
+      if (document.body.classList.contains("night")) {
+        button.innerHTML = "☀️ Switch to day";
+      } else {
+        button.innerHTML = "🌙 Switch to night";
+      }
+    }
+  </script>
+
+</body>
+</html>
